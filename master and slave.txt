@@ -1,0 +1,36 @@
+step1
+=====
+go to manage jenkins and go to node section and then add new node
+
+Node name=======devenv
+
+Type
+select=========Permanent Agent  then create
+
+step 2
+============
+Name====dev
+description====devenv
+Number of executors=====1 or 2 based on cpu cores
+Remote root directory================/home/ubuntu/jenkins
+Labels==============dev
+Usage==========only build jobs with lable expressions matching this node
+
+
+
+step3
+=======
+Launch method=====launched agent via ssh
+host===private ip(172.31.87.85)
+credentials========kind===select======ssh username with private key
+Username======ubuntu
+Private Key
+Enter directly=======privatekey
+then===save
+
+note :if job need to run in slava machine ==goto job configure==greneral option select====Restrict where this project can be run 
+
+
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<user username="tomcat" password="tomcat" roles="manager-gui,manager-script"/>

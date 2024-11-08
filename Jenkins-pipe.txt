@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven3'
+          }
+    stages {
+        stage('git checkout') {
+            steps {
+              git 'https://github.com/krishnaobbu/star-agile-project-demo-dummy.git'
+            }
+        }
+        stage('build') {
+            steps {
+              sh 'mvn clean package'
+            }
+        }
+        stage('deploy to dev') {
+            steps {
+                sshagent(['tomcat-id']) {
+                  sh """
+                    scp -o StrictHostKeyChecking=no target/addressbook.war  ubuntu@44.201.192.107:/home/ubuntu/apache-tomcat-9.0.95/webapps/
+                   
+                   """
+              }
+            }
+        }
+    }
+}
+
+
+
+squ_8e14366fece17a7c89b8a176fe832380de2227d6
+

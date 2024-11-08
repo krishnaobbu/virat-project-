@@ -1,0 +1,34 @@
+step1
+=====
+sudo apt update
+apt install docker.io -y
+docker run -d -p 9000:9000 sonarqube:lts-community
+
+step 2
+======
+
+got to browser enter pulicip:9000
+then give username==admin,passwd==admin then change old to new passwd
+
+goto========adminstaration======security=====users===generate token
+goto========adminstartion=====goto configuration=====select webhooks
+
+name===jenkins
+url============http://54.152.84.91:8080/sonarqube-webhook/
+
+step3
+=====
+
+goto jenkins ===managejenkins==plugins====available=install =====sonarqubescanner
+
+goto====tools====sonarqubeinstallations===sonar-scanner====latest version
+goto====system===servers==sonarqubeinstallations====gitve sonar url===credentials=====add in credentions in jenkins
+
+
+
+
+
+
+
+
+

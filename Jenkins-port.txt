@@ -1,0 +1,9 @@
+cd /usr/lib/systemd/system
+
+then go to vi jenkins.service
+there is Envronment=8080 then change it to what ever you want like 8090
+then sudo systemctl restart jenkins
+if not work
+then run below cmd
+systemctl daemon-reload
+then run sudo systemctl restart jenkins  then your your port will live

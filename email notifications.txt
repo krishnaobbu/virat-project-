@@ -1,0 +1,53 @@
+step1
+========
+goto manage jenkins===plugin section==available pligins====email extensions
+step2
+========
+then go to gmail ====then goto manage your google account===goto security==turn on your 2-step verfication==then goto app passwd==then enter jenkins then create
+==it will give passwdlike===========(w/o gap paste here) eobdunvcbhcoynwn
+step3
+=======
+
+goto manage jenkins==goto system==E-mail Notification==SMTP server===smtp.gmail.com==then select advanced===Use SMTP Authentication===
+
+then give 
+User Name
+haridevops52@gmail.com
+Password
+which we get from gmail app passwd you need to enter here.
+then select use ssl
+
+smtp i give port no 465  then Reply-To Address==haridevops52@gmail.com====Test configuration by sending test e-mail===haridevops52@gmail.com==then test configuration click you will get email notification
+
+then goto
+
+Extended E-mail Notification
+SMTP server
+smtp.gmail.com
+SMTP Port
+465
+Advanced
+Edited
+
+Credentials======username and password is app passwd
+
+haridevops52@gmail.com/****** 
+
+Use SSL
+
+then goto default triggeres
+
+select always
+failure
+success
+===============================================
+ 
+
+then goto dash board
+
+create newitem or job
+
+scm==git url
+build==do builds
+postbuils actions==Editable Email Notification===Project Recipient List====there enter emil id haridevops761@gmail.com
+

@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven3'
+    }
+     
+    stages {
+        stage('git checkout') {
+            steps {
+                git 'https://github.com/krishnaobbu/myweb.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        
+        stage('nexus'){
+            steps {
+               nexusArtifactUploader artifacts: [[artifactId: 'myweb', classifier: '', file: 'target/myweb-8.2.0.war', type: 'war']], credentialsId: '3a7d4f1a-547a-4eec-9aa4-bdfd71fa65ac', groupId: 'in.javahome', nexusUrl: '44.204.54.2:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'sample-release', version: '8.2.0'
+            }
+        }    
+    }
+}

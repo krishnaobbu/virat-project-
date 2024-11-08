@@ -1,0 +1,24 @@
+SonarQube : code review tool / code quality tool
+
+code -->> continueos inspect -->> continue review
+
+********Sonarqube port number : 9000
+
+Dev --->>> code --->> push -->>github -->> code -->> sonarqube --->>> code review 
+
+code -->>> quality gates --->>> create --->>> sonarqube --->>> code review 
+
+major issues  --->>> impact
+
+minor issues  --->> just impact
+
+critical issues ===>>> email to developeemnt team.
+
+blocker issues. --->>> imediate -->> eamil --->> developers-->> issue resolve
+
+ops team -->>> responsiblity -->> sonarqube install -->> result -->> blocker issues -->> dev -->>>mail.
+
+sonarqube integrate with jenkins..
+
+job -->> create -->>> result -->>> developers -->> email.
+
